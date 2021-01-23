@@ -20,11 +20,19 @@ public:
 };
 int main(){
     int N;//학생수
-    for(int i=0;i<N;i++){
-        Olympiad();//클래스 여러개 호출
-    }
-    for(int i=0;i<N;i++){
-        Olympiad();//큰순으로 금,은,동 해당되는 클래스차례로선정
+    Olympiad[N]();//클래스 여러개 호출
+    int change;
+    //큰순으로 금,은,동 해당되는 클래스차례로선정
+    for(int i=1;i<N;i++){
+        for(int j=0;j<N-i;j++{
+            if(Olympiad[i].grade>Olympiad[i+j].grade){
+                change = Olympiad[i].grade;
+                Olympiad[i].grade = Olympiad[i+j].grade;
+                Olympiad[i+j].grade = change;
+            }
+
+        }
+
     }
     //만약 금,은 나라가 동일하다면
     //금,은 나라가 아닌 국가를 대상으로
